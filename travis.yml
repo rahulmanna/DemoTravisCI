@@ -3,3 +3,4 @@ node_js:
 -11.6.0
 cache:npm
 script:
+java -jar ToscaCIJavaClient.jar -x -e http://TRI-NB1012:8732/TOSCARemoteExecutionService -m distributed -t junit
