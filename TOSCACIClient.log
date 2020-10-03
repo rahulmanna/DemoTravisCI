@@ -1,0 +1,327 @@
+2020-10-02 12:14:13,588 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 12:14:13,674 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Program - Main: There was a communication problem!
+The HTTP service located at http://localhost/DistributionServerService/ManagerService.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at TOSCAContinuousIntegration.TOSCACIClient.ManagerService.IManagerService.Register(Guid ciClientId, String ldapString)
+   at TOSCAContinuousIntegration.TOSCACIClient.ManagerService.ManagerServiceClient.Register(Guid ciClientId, String ldapString)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.RegisterAtServer()
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Connect()
+The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Connect()
+   at TOSCAContinuousIntegration.TOSCACIClient.Program.Main(String[] args)
+2020-10-02 12:16:58,270 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 12:16:58,348 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Program - Main: There was a communication problem!
+The HTTP service located at http://localhost/DistributionServerService/ManagerService.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at TOSCAContinuousIntegration.TOSCACIClient.ManagerService.IManagerService.Register(Guid ciClientId, String ldapString)
+   at TOSCAContinuousIntegration.TOSCACIClient.ManagerService.ManagerServiceClient.Register(Guid ciClientId, String ldapString)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.RegisterAtServer()
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Connect()
+The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Connect()
+   at TOSCAContinuousIntegration.TOSCACIClient.Program.Main(String[] args)
+2020-10-02 12:18:51,095 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 12:18:51,183 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 12:18:51,185 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 12:18:53,650 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://localhost:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"b76fb384-0623-47ea-ad2a-0b960f875e45","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"DEX_AOS","StartTime":"2020-10-02T12:18:51.195544+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 12:19:28,440 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Transfer-Encoding: chunked
+  Date: Fri, 02 Oct 2020 06:49:28 GMT
+  Server: Kestrel
+  Content-Type: text/plain; charset=utf-8
+}
+One or more errors occurred. (System.ArgumentException: A list without items is not allowed.
+Parameter name: eventNames
+   at Tricentis.DistributionServer.Server.CiDistributionEventsInfos..ctor(Guid ciClientId, DateTime startTime, IEnumerable`1 eventNames, Dictionary`2 agentConfiguration, Int32 timeout, Int32 pollingInterval)
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage.CreateCiDistributionEvent()
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage..ctor(EnqueueCiEventRequest enqueueEventRequest)
+   at Tricentis.DistributionServer.Server.MessageHandler.ServerMessageHandler.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest)
+   at Tricentis.DistributionServer.ServiceInterface.Services.ManagerService.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest))
+2020-10-02 12:19:28,441 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - The server responded with 400 Bad Request. Please make sure the endpoint 'http://localhost:5006/CiEvents' is reachable and the server is configured properly.
+2020-10-02 12:19:28,442 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 12:41:43,458 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 12:41:43,532 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 12:41:43,533 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 12:41:45,897 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://localhost:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"8953146e-1ded-402d-98cc-4c4da3360fbb","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"DEX_AOS","StartTime":"2020-10-02T12:41:43.542642+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 12:42:16,985 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Transfer-Encoding: chunked
+  Date: Fri, 02 Oct 2020 07:12:16 GMT
+  Server: Kestrel
+  Content-Type: text/plain; charset=utf-8
+}
+One or more errors occurred. (System.ArgumentException: A list without items is not allowed.
+Parameter name: eventNames
+   at Tricentis.DistributionServer.Server.CiDistributionEventsInfos..ctor(Guid ciClientId, DateTime startTime, IEnumerable`1 eventNames, Dictionary`2 agentConfiguration, Int32 timeout, Int32 pollingInterval)
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage.CreateCiDistributionEvent()
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage..ctor(EnqueueCiEventRequest enqueueEventRequest)
+   at Tricentis.DistributionServer.Server.MessageHandler.ServerMessageHandler.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest)
+   at Tricentis.DistributionServer.ServiceInterface.Services.ManagerService.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest))
+2020-10-02 12:42:16,986 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - The server responded with 400 Bad Request. Please make sure the endpoint 'http://localhost:5006/CiEvents' is reachable and the server is configured properly.
+2020-10-02 12:42:16,987 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 12:44:47,377 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 12:44:47,450 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 12:44:47,451 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 12:44:47,807 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"62d0f6c7-288f-4f56-af89-fb008473e862","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"DEX_AOS","StartTime":"2020-10-02T12:44:47.4590249+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 12:45:06,971 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Transfer-Encoding: chunked
+  Date: Fri, 02 Oct 2020 07:15:06 GMT
+  Server: Kestrel
+  Content-Type: text/plain; charset=utf-8
+}
+One or more errors occurred. (System.ArgumentException: A list without items is not allowed.
+Parameter name: eventNames
+   at Tricentis.DistributionServer.Server.CiDistributionEventsInfos..ctor(Guid ciClientId, DateTime startTime, IEnumerable`1 eventNames, Dictionary`2 agentConfiguration, Int32 timeout, Int32 pollingInterval)
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage.CreateCiDistributionEvent()
+   at Tricentis.DistributionServer.Server.Messages.EnqueueCiEventMessage..ctor(EnqueueCiEventRequest enqueueEventRequest)
+   at Tricentis.DistributionServer.Server.MessageHandler.ServerMessageHandler.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest)
+   at Tricentis.DistributionServer.ServiceInterface.Services.ManagerService.EnqueueCiEvent(EnqueueCiEventRequest enqueueCiEventRequest))
+2020-10-02 12:45:06,971 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - The server responded with 400 Bad Request. Please make sure the endpoint 'http://tri-nb1012:5006/CiEvents' is reachable and the server is configured properly.
+2020-10-02 12:45:06,972 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 12:46:07,001 [1] ERROR TOSCAContinuousIntegration.TOSCACIClient.Program - Main: FaultException occured
+System.ServiceModel.FaultException: CiClient with id = 62d0f6c7-288f-4f56-af89-fb008473e862 has not requested a distribuition! The CiClient may be outdated or the server may have been restarted.
+   at Tricentis.DistributionServer.ServiceInterface.Services.ManagerService.PollCiTestEventsResults(PollCiTestEventsResultsRequest pollCiTestEventsResultsRequest)
+
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at TOSCAContinuousIntegration.TOSCACIClient.ManagerService.IManagerService.PollCiTestEventsResults(PollCiTestEventsResultsRequest pollCiTestEventsResultsRequest)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.PollDexServer(HashSet`1 finishedEntries)
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Execute()
+   at TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher.Execute()
+   at TOSCAContinuousIntegration.TOSCACIClient.Program.Main(String[] args)
+2020-10-02 17:56:48,025 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 17:56:48,220 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 17:56:48,221 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 17:56:49,113 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"f2f531c8-afaf-4be2-b913-3a4a24e0f5d9","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-02T17:56:48.2969983+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 17:57:40,970 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Fri, 02 Oct 2020 12:27:40 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-02 17:57:40,973 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 17:58:41,038 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-02 17:58:41,040 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 17:58:41,088 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 17:58:41,090 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-02 17:58:41,090 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-02 18:04:58,978 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 18:04:59,085 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 18:04:59,087 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 18:04:59,496 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"70043455-ecee-4538-86b0-856da99c178d","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-02T18:04:59.0973492+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 18:05:17,155 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Fri, 02 Oct 2020 12:35:16 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-02 18:05:17,156 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 18:06:17,188 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-02 18:06:17,190 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:06:17,239 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:06:17,240 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-02 18:06:17,241 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-02 18:08:45,710 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 18:08:45,783 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 18:08:45,784 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 18:08:46,165 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"6ae18f82-f78f-4810-a7a9-d5a9e569227e","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-02T18:08:45.7913+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 18:09:12,459 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Fri, 02 Oct 2020 12:39:11 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-02 18:09:12,459 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 18:10:12,527 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-02 18:10:12,529 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:11:12,590 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-02 18:11:12,590 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7fb80-249e-e99c-6a87-305194867cdf, Item id: 3b9f261d-c9f0-4e97-a221-fb65882acd63, Event id: 87ef6f29-78f5-4a61-9996-28a2b98c7f68, Event index: 0)
+2020-10-02 18:11:12,590 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:11:12,597 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:11:12,598 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-02 18:11:12,599 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-02 18:12:42,060 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Object reference not set to an instance of an object.
+2020-10-02 18:12:42,223 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-02 18:12:42,227 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-02 18:12:42,707 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"5081f01d-9a3b-4a2f-b35f-762f1f1f67af","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-02T18:12:42.2424922+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-02 18:13:08,640 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Fri, 02 Oct 2020 12:43:08 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-02 18:13:08,640 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-02 18:14:08,718 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-02 18:14:08,721 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:15:08,810 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-02 18:16:08,869 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-02 18:16:08,869 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7fb84-1204-d125-2f12-f7a4ee1abf28, Item id: 2c6034ad-1b5a-4864-85e7-2bfaeb63014f, Event id: ca1623c6-9dde-4050-ac30-3f5c33dcd8d9, Event index: 0)
+2020-10-02 18:16:08,869 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:16:08,893 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-02 18:16:08,897 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-02 18:16:08,898 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-03 09:05:40,690 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - The server is not operational.
+
+2020-10-03 09:05:40,861 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-03 09:05:40,861 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-03 09:05:43,687 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"8494b1fd-3270-4bad-9bf7-081a6b8ec050","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-03T09:05:41.0108844+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-03 09:06:45,241 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Sat, 03 Oct 2020 03:36:44 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-03 09:06:45,241 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-03 09:07:45,347 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:07:45,355 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:08:45,442 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:09:45,449 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:10:45,534 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-03 09:10:45,535 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7feb6-2935-b1ab-ab55-fc5d9ba6359e, Item id: 8caa0d76-a42b-4567-b0d6-9e5d9b25d672, Event id: ae26c623-800d-46ba-8814-b490fa94f4b1, Event index: 0)
+2020-10-03 09:10:45,535 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:10:45,549 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:10:45,551 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-03 09:10:45,552 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-03 09:13:49,677 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-03 09:13:49,699 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-03 09:13:50,413 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"455c1ffe-ed48-419a-9d55-1218a927e77e","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-03T09:13:49.7416681+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-03 09:14:18,833 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Sat, 03 Oct 2020 03:44:18 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-03 09:14:18,833 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-03 09:15:18,897 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:15:18,899 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:16:18,958 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-03 09:16:18,958 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7febc-ddef-5448-843c-8e7df38c43da, Item id: 9fd84476-9ba0-4e02-8ef6-c8bb1367c567, Event id: ca86ea58-6442-4a1f-85ad-4dfe78ed245a, Event index: 0)
+2020-10-03 09:16:18,958 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:16:18,969 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:16:18,971 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-03 09:16:18,971 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-03 09:22:33,017 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-03 09:22:33,032 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-03 09:22:33,438 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"96118195-0698-41bb-a02e-83dfa0c22acc","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-03T09:22:33.0485744+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-03 09:23:08,954 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Sat, 03 Oct 2020 03:53:08 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-03 09:23:08,954 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-03 09:24:09,059 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:24:09,059 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:25:09,156 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-03 09:25:09,156 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7fec4-f0ef-761e-1c40-69ad20c218bd, Item id: 8f289364-a903-475c-9956-bb9430302836, Event id: d6b1432c-7b76-4252-8f26-b22be14bde06, Event index: 0)
+2020-10-03 09:25:09,156 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:25:09,172 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:25:09,172 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-03 09:25:09,172 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
+2020-10-03 09:40:08,280 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - CI Client was registered successfully on DEX server.
+2020-10-03 09:40:08,295 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - http://tri-nb1012:82/DistributionServerService/ManagerService.svc
+2020-10-03 09:40:08,665 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex request: Method: POST, RequestUri: 'http://tri-nb1012:5006/CiEvents', Version: 1.1, Content: System.Net.Http.StringContent, Headers:
+{
+    Content-Type: application/json; charset=utf-8
+}
+{"CiClientId":"37116f46-bf81-47c7-9035-9950f6c36e13","CiClientTimeout":36000000,"EventNames":[],"PollingInterval":60000,"ProjectId":"CommonRepository_Local","StartTime":"2020-10-03T09:40:08.3024439+05:30","TestEventsAndResultFolders":[{"Key":"Demo Event","Value":"True"}]}
+2020-10-03 09:40:29,203 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.AutomationObjectServiceHandler - Dex response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Sat, 03 Oct 2020 04:10:28 GMT
+  Server: Kestrel
+  Content-Length: 0
+}
+
+2020-10-03 09:40:29,203 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Starting to poll Dex server for results. Timeout: 36000000. Interval: 60000
+2020-10-03 09:41:29,435 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is not yet finished.
+2020-10-03 09:41:29,456 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:42:29,652 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Polled Dex Server. Execution is finished.
+2020-10-03 09:42:29,652 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Finished ExecutionEntry 'Dex Sample Test Case' with result 'Passed'. (UniqueId: 39f7fed4-cffa-aee2-bbda-01abfdc9e287, Item id: a45d51b1-c102-4028-a723-9dc9c9419ad6, Event id: 2288ec26-6f35-4286-9ce1-c16f28745221, Event index: 0)
+2020-10-03 09:42:29,652 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:42:29,681 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Creating junit test result...
+2020-10-03 09:42:29,681 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Dispatching.DexRemoteDispatcher - Test execution has been finished.
+2020-10-03 09:42:29,681 [1] INFO  TOSCAContinuousIntegration.TOSCACIClient.Program - Result was printed to >C:\Config file\Result.xml<
